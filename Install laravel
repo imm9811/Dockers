@@ -12,14 +12,13 @@ git clone https://github.com/laravel/laravel.git laravel-app
 cd laravel-app
 
 ahora instalar el docker dentro del laravel app para eso hay otro fichero 
+https://github.com/ismairene/Dockers/blob/master/Use%20Dockers
 
 si quiero ver mi directorio git hacer ls -lia
 
 y quito las cosas que no me interesan 
 
 rm -R .git*
-
-
 
 
 -----------------------------
@@ -35,6 +34,6 @@ docker run --rm -v $(pwd):/app composer/composer install
 - se usa --rm para asegurarnos de que este contenedor no persista despues de la instalacion
 - y v $(pwd) se usa para montar el directorio actual en el host  en el directorio /app de contenedor 
 
-aho
+
 
 
