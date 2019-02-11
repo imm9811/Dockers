@@ -11,6 +11,8 @@ con git clone
 git clone https://github.com/laravel/laravel.git laravel-app
 cd laravel-app
 
+ahora instalar el docker dentro del laravel app para eso hay otro fichero 
+
 si quiero ver mi directorio git hacer ls -lia
 
 y quito las cosas que no me interesan 
