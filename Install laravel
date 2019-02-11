@@ -1,0 +1,15 @@
+Crear dockers instalando Laravel  |
+-----------------------------------
+Se busca no instalar php, ni composer de manera global, ni tampoco instalar maquina vagrant, ni tampoco LAMP
+-------------------------------------
+
+
+1.- Instalar ultima version de Laravel
+obtendremos una copia del github delaravel, desde cualquier fuente
+
+con git clone
+git clone https://github.com/laravel/laravel.git laravel-app
+
+-----------------------------
+
+2.- Instalar dependencias 
