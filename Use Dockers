@@ -1,0 +1,6 @@
+
+instalar docker
+
+si ya habias hecho algun vez un contenedor y usaste el comando snap... puedes usar este comando ya que snap puede traer dockers
+
+sudo snap docker
