@@ -1,6 +1,7 @@
 Crear dockers instalando Laravel  |
 -----------------------------------
-Se busca no instalar php, ni composer de manera global, ni tampoco instalar maquina vagrant, ni tampoco LAMP
+Se busca no instalar php, ni composer de manera global, ni tampoco instalar maquina vagrant, ni tampoco LAMP,
+por lo que NO usaremos la guia oficial
 -------------------------------------
 
 
@@ -27,13 +28,54 @@ rm -R .git*
 se necesita ejecutar "composer install" para acceder a todas las librerias tambien se puede usar la imagen composer/composer desde dockerhub
 
 se creara un contenedor desechable
-
-docker run --rm -v $(pwd):/app composer/composer install
+(tenemos que estar dentro del laravel-app, ya que necesitamos el composer.json para instalar)
+docker run --rm -v $(pwd):/app composer install
 
 !------
 - se usa --rm para asegurarnos de que este contenedor no persista despues de la instalacion
-- y v $(pwd) se usa para montar el directorio actual en el host  en el directorio /app de contenedor 
+- y v $(pwd) se usa para montar el directorio actual en el host  en el directorio /app del contenedor 
 
+-------------------------------------------------------
+
+3.-Crear el archivo de desarrollo  docker-compose.yml
+la cosa es, que al realizar una llamada a este archivo se descargue las isntancias  y se ponga a funcionar el entorno del tiron
+Se necesitaran 2 archivos separados, uno para desarrollo(.yml) y otra para produccion
+docker-compose admite el uso de multiples arcihvos
+
+primero creamos el archivo como tal 
+
+#+BEGIN_SRC yaml
+
+debemos comenzar con:
+version:'2.0'
+servicios:
+
+
+lo siguiente:
+  app:
+    build:
+      context: ./
+      dockerfile: app.dockerfile
+      working_dir: /var/www
+      volumes:
+        - ./:/var/www
+        enviorement:
+        - "DB_PORT=3306"
+        - "DB_HOST=database"
+        
+
+php-fpm(fast cgi process manager), es como una version adelgazada, en el cual iremos incluyendo los modulos d ephp conforme lo vayamos necesitando
+http://php.net/manual/es/install.fpm.php
+por si quieres mas info+;
+
+app.dockerfile al que se hico referencia antes en la configuracion build.
+ahora crearemos el archivo app.dockerfile :
+FROM 
+
+
+
+NGINX, se necesita servidor web configurado para manejar tanto el servicio de ser archivos estaticos como la transfrencia de solicitudes qque deben ser manejadas por la aplicacion laravel.
+Se necesitara el mismo proceso de antes
 
 
 
