@@ -78,4 +78,7 @@ NGINX, se necesita servidor web configurado para manejar tanto el servicio de se
 Se necesitara el mismo proceso de antes
 
 
+seguiremos con web.dockerfile 
+from  nginx:latest
 
+ADD  vhost.conf /etc/nginx/conf
