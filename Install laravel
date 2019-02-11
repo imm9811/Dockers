@@ -9,7 +9,28 @@ obtendremos una copia del github delaravel, desde cualquier fuente
 
 con git clone
 git clone https://github.com/laravel/laravel.git laravel-app
+cd laravel-app
+
+si quiero ver mi directorio git hacer ls -lia
+
+y quito las cosas que no me interesan 
+
+rm -R .git*
+
+
+
 
 -----------------------------
 
 2.- Instalar dependencias 
+se necesita ejecutar "composer install" para acceder a todas las librerias tambien se puede usar la imagen composer/composer desde dockerhub
+
+se creara un contenedor desechable
+
+docker run --rm -v $(pwd):/app composer/composer install
+
+!------
+- se usa --rm para asegurarnos de que este contenedor no persista despues de la instalacion
+- y v $(pwd) se usa para montar el directorio actual en el host  en el directorio
+
+
