@@ -31,6 +31,7 @@ docker run --rm -v $(pwd):/app composer/composer install
 
 !------
 - se usa --rm para asegurarnos de que este contenedor no persista despues de la instalacion
-- y v $(pwd) se usa para montar el directorio actual en el host  en el directorio
+- y v $(pwd) se usa para montar el directorio actual en el host  en el directorio /app de contenedor 
+
 
 
