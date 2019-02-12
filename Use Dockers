@@ -57,24 +57,29 @@ sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
  
  
+ 2.5.- Volvemos a recargaar y por fin instalamos dockers
+   sudo apt-get update
+   sudo apt-get install docker-ce docker-ce-cli containerd.io
+ 
+ 2.6.- Ahora comprobamos que todo este bien
+  sudo docker run hello-world
  
  
  
+ 3.- Si queremos eliminar el docker usamos el siguiente comando
  
- 
+  sudo apt-get purge docker-ce
+  
+  pero la gracia es que las imagenes siguen montadas, y para quitarlas tendremos que usar el siguiente comando
+  sudo rm -rf /var/lib/docker
  
  -----------------------------------------------------------------------------------------
  
- una vez instalado ya e docker subiremosos las imagenes que nos hagan falta
+ una vez instalado ya e docker subiremos las imagenes que nos hagan falta
  
  en esta pagina encontraremos las imagenes qque nos hagan falta, y el comando para poder bajarla
- 
+
  https://hub.docker.com/
+ los docker pull  seria conveniente que lo hicieras dentro del directorio y fichero que te interesan
  
-
- 
- nos hara falta descargar el docker compose
- sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
- 
-
 
