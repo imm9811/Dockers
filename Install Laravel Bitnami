@@ -1,4 +1,4 @@
-1.- Primero descargar docker , pero antes claramento tendremos que tener instalado nuestro docker
+1.- Instalaremos Laravel , pero antes CLARAMENTE tendremos que tener INSTALADO nuestro docker
 
 sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
@@ -10,6 +10,11 @@ y pondremos LOS 3 SIGUIENTES COMANDOS:
 sudo mkdir ~/myapp && cd ~/myapp
 sudo curl -LO https://raw.githubusercontent.com/bitnami/bitnami-docker-laravel/master/docker-compose.yml
 sudo docker-compose up
+
+Primer nos crea la carpeta donde se alojaran los archivos que bajaremos de la imagen con la url del siguiente comando
+Segundo nos bajamos la imagen
+Tercero levantamos el servicio
+
 
 --fuente original--
 https://hub.docker.com/r/bitnami/laravel/
