@@ -8,7 +8,7 @@ Nos instalar el docker compose
 sudo apt install docker-compose
 
 
-Instalar laravel con bitnami 
+Instalar laravel con bitnami
 primero creamos un directorio de prueba para ver que funciona bien
 
 y pondremos LOS 3 SIGUIENTES COMANDOS:
