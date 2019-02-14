@@ -14,7 +14,8 @@ si quieres ver la fuente original.- https://docs.docker.com/install/linux/docker
 
 si ya habias hecho algun vez un contenedor y usaste el comando snap... puedes usar este comando ya que snap puede traer dockers
 
-sudo snap install docker;
+sudo snap install docker; 
+
  si no ;
  
 Vamos paso por paso
