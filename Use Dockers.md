@@ -58,11 +58,13 @@ sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
  
  
- 2.5.- Volvemos a recargaar y por fin instalamos dockers
+ 2.5.- Volvemos a recargaar y por fin instalamos dockers 
+ 
    sudo apt-get update
    sudo apt-get install docker-ce docker-ce-cli containerd.io
  
- 2.6.- Ahora comprobamos que todo este bien
+ 2.6.- Ahora comprobamos que todo este bien 
+ 
   sudo docker run hello-world
  
  
